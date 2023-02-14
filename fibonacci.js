@@ -1,5 +1,4 @@
-// Iterative loop returning an array
-
+// Iterative version
 function fibs(num) {
   const array = [0, 1];
   if (num === 0) return [];
@@ -12,6 +11,7 @@ function fibs(num) {
   return array;
 }
 
+// Recursive version
 function fibsRec(num, array = [0, 1]) {
   if (num == 0) return [];
   if (num == 1) return [array[0]];
@@ -19,5 +19,3 @@ function fibsRec(num, array = [0, 1]) {
   array.push(array[array.length - 2] + array[array.length - 1]);
   return fibsRec(num - 1, array);
 }
-
-console.log(fibsRec(8));
